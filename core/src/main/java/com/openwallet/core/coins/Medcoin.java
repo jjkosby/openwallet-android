@@ -13,14 +13,14 @@ public class Medcoin extends BitFamily {
         p2shHeader = 5;
         acceptableAddressCodes = new int[] { addressHeader, p2shHeader };
         spendableCoinbaseDepth = 100;
-        dumpedPrivateKeyHeader = 179; //176 for LTC 128/BTC  179 for b3 med
+        dumpedPrivateKeyHeader = 179; 
 
         name = "Mediterraneancoin";
         symbol = "MED";
         uriScheme = "mediterraneancoin";
         bip44Index = 2;
         unitExponent = 8;
-        feeValue = value(1000000); // 0.001
+        feeValue = value(1000000); // 0.01
         minNonDust = value(10000); // 0.0001 MED mininput
         softDustLimit = value(100000); // 0.001 MED
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
