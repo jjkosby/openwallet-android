@@ -1,4 +1,4 @@
-#  Added Mediterraneancoin [MED] support
+#  Added Mediterraneancoin [MED] support 
 
 OpenWallet for Android
 ===============
