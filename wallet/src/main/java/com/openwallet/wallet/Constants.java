@@ -128,6 +128,8 @@ public class Constants {
 
     // TODO move to resource files
     public static final List<CoinAddress> DEFAULT_COINS_SERVERS = ImmutableList.of(
+            new CoinAddress(Medcoin.get(),          new ServerAddress("mediterraneancoin.cc", 59378),
+                                                    new ServerAddress("mediterraneancoins.org", 59378)),
             new CoinAddress(BitcoinMain.get(),      new ServerAddress("btc-cce-1.coinomi.net", 5001),
                                                     new ServerAddress("btc-cce-2.coinomi.net", 5001)),
             new CoinAddress(BitcoinTest.get(),      new ServerAddress("btc-testnet-cce-1.coinomi.net", 15001),
@@ -221,6 +223,7 @@ public class Constants {
     public static final HashMap<CoinType, String> COINS_BLOCK_EXPLORERS;
     static {
         COINS_ICONS = new HashMap<>();
+        COINS_ICONS.put(CoinID.MEDCOIN_MAIN.getCoinType(), R.drawable.medcoin);
         COINS_ICONS.put(CoinID.BITCOIN_MAIN.getCoinType(), R.drawable.bitcoin);
         COINS_ICONS.put(CoinID.BITCOIN_TEST.getCoinType(), R.drawable.bitcoin_test);
         COINS_ICONS.put(CoinID.DOGECOIN_MAIN.getCoinType(), R.drawable.dogecoin);
@@ -266,6 +269,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.IXCOIN_MAIN.getCoinType(), R.drawable.ixcoin);
 
         COINS_BLOCK_EXPLORERS = new HashMap<CoinType, String>();
+        COINS_BLOCK_EXPLORERS.put(CoinID.MEDCOIN_MAIN.getCoinType(), "http://explorer.mediterraneancoin.xyz:8888/chain/Mediterraneancoin/tx/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_MAIN.getCoinType(), "https://blockchain.info/tx/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_TEST.getCoinType(), "https://chain.so/tx/BTCTEST/%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.DOGECOIN_MAIN.getCoinType(), "https://chain.so/tx/DOGE/%s");
@@ -317,6 +321,7 @@ public class Constants {
     );
 
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
+            Medcoin.get(),
             BitcoinMain.get(),
             AsiacoinMain.get(),
             AuroracoinMain.get(),
