@@ -71,6 +71,7 @@
             <intent-filter android:label="@string/app_name" >
                 <action android:name="android.intent.action.VIEW" />
 
+                <data android:scheme="mediterraneancoin" />
                 <data android:scheme="bitcoin" />
                 <data android:scheme="litecoin" />
                 <data android:scheme="dogecoin" />
